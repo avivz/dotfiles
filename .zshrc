@@ -87,6 +87,7 @@ plugins=(
 	zsh-completions
 	zsh-autosuggestions
 	web-search
+	dirhistory
 )
 
 source $ZSH/oh-my-zsh.sh
