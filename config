@@ -1,0 +1,30 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+# Jump box 
+Host bava-jump-box
+    HostName bava.cs.huji.ac.il
+    User avivz
+
+Host pond 
+    HostName pond.cs.huji.ac.il
+    User avivz
+
+Host pond_jump
+    HostName pond.cs.huji.ac.il
+    User avivz
+
+Host rory
+    HostName rory.cs.huji.ac.il
+    User avivz
+
+Host rory_jump
+    HostName rory.cs.huji.ac.il
+    User avivz
+
+Host *_jump
+    ProxyJump bava-jump-box
+    User avivz
+
+
+Host *
+    Compression yes
+    #ForwardX11 yes
