@@ -121,7 +121,8 @@ bindkey '^[[B' history-substring-search-down
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ssh_pond="ssh -J avivz@bava.cs.huji.ac.il -CX avivz@pond.cs.huji.ac.il"
 
+alias rm="rm -i"
+alias cp="cp -i"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
