@@ -20,10 +20,16 @@ Host rory_jump
     HostName rory.cs.huji.ac.il
     User avivz
 
+Host cryptocur_jump
+    HostName rory.cs.huji.ac.il
+    User cryptocur
+
+Host cryptocur
+    HostName rory.cs.huji.ac.il
+    User cryptocur
+
 Host *_jump
     ProxyJump bava-jump-box
-    User avivz
-
 
 Host *
     Compression yes
