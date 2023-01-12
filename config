@@ -11,10 +11,15 @@ Host pond
 Host pond_jump
     HostName pond.cs.huji.ac.il
     User avivz
+    
+Host sed
+    HostName sed.cs.huji.ac.il
+    User avivz
 
 Host rory
     HostName rory.cs.huji.ac.il
     User avivz
+
 
 Host rory_jump
     HostName rory.cs.huji.ac.il
