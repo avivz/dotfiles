@@ -16,6 +16,10 @@ Host sed
     HostName sed.cs.huji.ac.il
     User avivz
 
+Host sed_jump
+    HostName sed.cs.huji.ac.il
+    User avivz
+
 Host rory
     HostName rory.cs.huji.ac.il
     User avivz
