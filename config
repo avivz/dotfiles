@@ -2,44 +2,37 @@
 # Jump box 
 Host bava-jump-box
     HostName bava.cs.huji.ac.il
-    User avivz
 
-Host pond 
+# standard cs hosts
+Host pond pond_jump pond_tmux pond_jump_tmux
     HostName pond.cs.huji.ac.il
-    User avivz
 
-Host pond_jump
-    HostName pond.cs.huji.ac.il
-    User avivz
-    
-Host sed
+Host rory rory_jump rory_tmux rory_jump_tmux
+    HostName rory.cs.huji.ac.il
+
+Host river river_jump river_tmux river_jump_tmux
+    HostName river-01.cs.huji.ac.il
+
+#cluster
+Host sed sed_jump sed_tmux sed_jump_tmux
     HostName sed.cs.huji.ac.il
-    User avivz
 
-Host sed_jump
-    HostName sed.cs.huji.ac.il
-    User avivz
-
-Host rory
+#login as course
+Host cryptocur cryptocur_jump
     HostName rory.cs.huji.ac.il
-    User avivz
+    RemoteCommand su cryptocur
+    RequestTTY yes
 
-
-Host rory_jump
-    HostName rory.cs.huji.ac.il
-    User avivz
-
-Host cryptocur_jump
-    HostName rory.cs.huji.ac.il
-    User cryptocur
-
-Host cryptocur
-    HostName rory.cs.huji.ac.il
-    User cryptocur
-
-Host *_jump
+#setup connections via the jumpbox
+Host *_jump *_jump_tmux
     ProxyJump bava-jump-box
+
+# set up tmux on login
+Host *_tmux
+    RemoteCommand tmux at || tmux new
+    RequestTTY yes
 
 Host *
     Compression yes
+    User avivz
     #ForwardX11 yes
