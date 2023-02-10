@@ -35,4 +35,12 @@ Host *_tmux
 Host *
     Compression yes
     User avivz
+    
+    # enable multiplexing of ssh connections!
+    # ControlMaster auto 
+    #this directory must be created!
+    # ControlPath  ~/.ssh/sockets/%r@%h-%p  
+    #ssh connections persist 60 secs after close
+    # ControlPersist  60 
+    
     #ForwardX11 yes

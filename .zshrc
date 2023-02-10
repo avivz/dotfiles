@@ -126,5 +126,13 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 alias jupyter="~/jupyter/bin/jupyter-notebook"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#####################################################################################
+### SETUP keychain
+### The --clear option make sure Intruder cannot use your existing SSH-Agents keys 
+### i.e. Only allow cron jobs to use password less login 
+#####################################################################################
+# eval `keychain -q --eval --agents ssh $HOME/.ssh/id_ed25519`
