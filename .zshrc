@@ -126,5 +126,6 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 alias jupyter="~/jupyter/bin/jupyter-notebook"
+alias tmux="tmux attach 2> /dev/null || tmux"  #make tmux attach to existing sessions as the default (if they exist) otherwise, create new sessions
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
