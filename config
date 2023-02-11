@@ -2,26 +2,32 @@
 # Jump box 
 Host bava-jump-box
     HostName bava.cs.huji.ac.il
+    ForwardAgent yes
 
 # standard cs hosts
 Host pond pond_jump pond_tmux pond_jump_tmux
     HostName pond.cs.huji.ac.il
+    ForwardAgent yes
 
 Host rory rory_jump rory_tmux rory_jump_tmux
     HostName rory.cs.huji.ac.il
+    ForwardAgent yes
 
 Host river river_jump river_tmux river_jump_tmux
     HostName river-01.cs.huji.ac.il
+    ForwardAgent yes
 
 #cluster
 Host sed sed_jump sed_tmux sed_jump_tmux
     HostName sed.cs.huji.ac.il
+    ForwardAgent yes
 
 #login as course
 Host cryptocur cryptocur_jump
     HostName rory.cs.huji.ac.il
     RemoteCommand su cryptocur
     RequestTTY yes
+    ForwardAgent yes
 
 #setup connections via the jumpbox
 Host *_jump *_jump_tmux
@@ -36,7 +42,6 @@ Host *
     Compression yes
     User avivz
     AddKeysToAgent yes
-    ForwardAgent yes
     
     # enable multiplexing of ssh connections!
     # ControlMaster auto 
