@@ -35,6 +35,8 @@ Host *_tmux
 Host *
     Compression yes
     User avivz
+    AddKeysToAgent yes
+    ForwardAgent yes
     
     # enable multiplexing of ssh connections!
     # ControlMaster auto 

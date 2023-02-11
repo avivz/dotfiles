@@ -88,7 +88,11 @@ plugins=(
 	zsh-autosuggestions
 	web-search
 	dirhistory
+	ssh-agent
 )
+
+zstyle :omz:plugins:ssh-agent lazy yes
+zstyle :omz:plugins:ssh-agent quiet yes
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
