@@ -29,6 +29,11 @@ Host cryptocur cryptocur_jump
     RequestTTY yes
     ForwardAgent yes
 
+Host erigon erigon_jump
+    HostName ethereum-erigon.cs.huji.ac.il
+    ForwardAgent yes
+    LocalForward 8545 127.0.0.1:8545
+
 #setup connections via the jumpbox
 Host *_jump *_jump_tmux
     ProxyJump bava-jump-box
